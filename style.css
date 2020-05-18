@@ -1,0 +1,102 @@
+body {
+	margin: 0;
+	box-sizing: border-box;
+}
+#weather-rock {
+	width: 1200px;
+	margin: 0 auto;
+	min-height: 700px;
+	position: relative;
+	text-align: center;
+	background: linear-gradient(to bottom, #202020, #111119);
+}
+#stand {
+	position: absolute;
+	bottom: 50px;
+	text-align: center;
+	width: 100%;
+}
+.stick {
+	height: 500px;
+	width: 10px;
+	background: brown;
+	position: absolute;
+	transform-origin: center 10%;
+	bottom: 0;
+	margin: 0 auto;
+	left: 50%;
+}
+.stick.left {
+	transform: rotate(20deg) translateX(-50%);
+}
+.stick.right {
+	transform: rotate(-20deg) translateX(-50%);
+}
+#rock {
+	margin: 0 auto;
+	max-width: 100px;
+	width: 100px;
+	transform-origin: center -350px;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: cubic-bezier(0.310, 0.440, 0.445, 1.650); 
+}
+#rock img {
+	transform: translateY(-60%);
+}
+#rock:after {
+	content: "";
+	width: 4px;
+	height: 350px;
+	background: black;
+	top: 0;
+	left: 50%;
+	transform: translate(-2px, -100%);
+	position: absolute;
+	z-index: -1;
+}
+@keyframes sway5 {
+	0% {transform: rotate(-5deg)}
+	50% {transform: rotate(5deg)}
+	100% {transform: rotate(-5deg)}
+}
+@keyframes sway10 {
+	0% {transform: rotate(-10deg)}
+	50% {transform: rotate(10deg)}
+	100% {transform: rotate(-10deg)}
+}
+@keyframes sway15 {
+	0% {transform: rotate(-15deg)}
+	50% {transform: rotate(15deg)}
+	100% {transform: rotate(-15deg)}
+}
+@keyframes sway20 {
+	0% {transform: rotate(-20deg)}
+	50% {transform: rotate(20deg)}
+	100% {transform: rotate(-20deg)}
+}
+@keyframes sway15 {
+	0% {transform: rotate(-25deg)}
+	50% {transform: rotate(25deg)}
+	100% {transform: rotate(-25deg)}
+}
+@keyframes sway30 {
+	0% {transform: rotate(-30deg)}
+	50% {transform: rotate(30deg)}
+	100% {transform: rotate(-5deg)}
+}
+@keyframes sway35 {
+	0% {transform: rotate(-35deg)}
+	50% {transform: rotate(35deg)}
+	100% {transform: rotate(-35deg)}
+}
+@keyframes sway40 {
+	0% {transform: rotate(-40deg)}
+	50% {transform: rotate(40deg)}
+	100% {transform: rotate(-40deg)}
+}
+@keyframes sway45 {
+	0% {transform: rotate(-45deg)}
+	50% {transform: rotate(45deg)}
+	100% {transform: rotate(-45deg)}
+}
