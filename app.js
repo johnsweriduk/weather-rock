@@ -1,7 +1,6 @@
 $(() => {
 	const key = 'e5a1c9b4f117b606aead46c48f1cb204';
-	//const loc = 'Chillicothe,Ohio'
-	//const loc = 'Mount Washington'
+	
 	const displayWeather = (url) => {
 		$.ajax({
 			url: url
@@ -12,6 +11,7 @@ $(() => {
 			if(swayAmount > 45) {
 				swayAmount = 45;
 			}
+			$('.rain').empty();
 			const windAnimation = 'sway' + swayAmount;
 			console.log(windAnimation);
 			$('#rock').css('animation-name', windAnimation);
@@ -39,6 +39,21 @@ $(() => {
 				displayWeather(url);
 			}
 		);
-	} else {
 	}
+	$('input[type="submit"]').click( () => {
+		const loc = $('input[type="tel"]').val();
+		if(loc !== '') {
+			const url = `http://api.openweathermap.org/data/2.5/weather?q=${loc}&appid=${key}`;
+			displayWeather(url);
+		}
+	});
+	$('input[type="tel"]').keyup( e => {
+		if ($('input[type="tel"]').is(":focus") && (e.keyCode == 13)) {
+			const loc = $('input[type="tel"]').val();
+			if(loc !== '') {
+				const url = `http://api.openweathermap.org/data/2.5/weather?q=${loc}&appid=${key}`;
+				displayWeather(url);
+			}
+		}
+	});
 });
