@@ -1,5 +1,8 @@
 
 const makeItRain = (amount) => {
+	if(amount > 125) {
+		amount = 125;
+	}
 	//clear out everything
 	$('.rain').empty();
 
