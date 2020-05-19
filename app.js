@@ -32,24 +32,19 @@ $(() => {
 					url = `http://api.openweathermap.org/data/2.5/weather?lat=${pos.coords.latitude}&lon=${pos.coords.longitude}&appid=${key}`;
 				}
 				displayWeather(url);
-			},
-			err => {
-				const pos = 'Chillicothe,Ohio'
-				let url = `http://api.openweathermap.org/data/2.5/weather?q=${pos}&appid=${key}`;
-				displayWeather(url);
 			}
 		);
 	}
 	$('input[type="submit"]').click( () => {
-		const loc = $('input[type="tel"]').val();
+		const loc = $('input[type="text"]').val();
 		if(loc !== '') {
 			const url = `http://api.openweathermap.org/data/2.5/weather?q=${loc}&appid=${key}`;
 			displayWeather(url);
 		}
 	});
-	$('input[type="tel"]').keyup( e => {
-		if ($('input[type="tel"]').is(":focus") && (e.keyCode == 13)) {
-			const loc = $('input[type="tel"]').val();
+	$('input[type="text"]').keyup( e => {
+		if ($('input[type="text"]').is(":focus") && (e.keyCode == 13)) {
+			const loc = $('input[type="text"]').val();
 			if(loc !== '') {
 				const url = `http://api.openweathermap.org/data/2.5/weather?q=${loc}&appid=${key}`;
 				displayWeather(url);
