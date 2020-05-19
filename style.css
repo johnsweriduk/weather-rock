@@ -8,7 +8,9 @@ body {
 	min-height: 700px;
 	position: relative;
 	text-align: center;
-	background: linear-gradient(to bottom, #202020, #111119);
+	background: url(assets/svg/forest.svg);
+	background-position: bottom center;
+	background-size: cover;
 }
 #stand {
 	position: absolute;

@@ -1,6 +1,6 @@
 $(() => {
 	const key = 'e5a1c9b4f117b606aead46c48f1cb204';
-	
+	const protocol = window.location.protocol;
 	const displayWeather = (url) => {
 		$.ajax({
 			url: url
@@ -27,9 +27,9 @@ $(() => {
 	if(navigator.geolocation) {
 		navigator.geolocation.getCurrentPosition(
 			pos => {
-				let url = `http://api.openweathermap.org/data/2.5/weather?q=${pos}&appid=${key}`;
+				let url = `${protocol}//api.openweathermap.org/data/2.5/weather?q=${pos}&appid=${key}`;
 				if(pos !== '') {
-					url = `http://api.openweathermap.org/data/2.5/weather?lat=${pos.coords.latitude}&lon=${pos.coords.longitude}&appid=${key}`;
+					url = `${protocol}//api.openweathermap.org/data/2.5/weather?lat=${pos.coords.latitude}&lon=${pos.coords.longitude}&appid=${key}`;
 				}
 				displayWeather(url);
 			}
@@ -38,7 +38,7 @@ $(() => {
 	$('input[type="submit"]').click( () => {
 		const loc = $('input[type="text"]').val();
 		if(loc !== '') {
-			const url = `http://api.openweathermap.org/data/2.5/weather?q=${loc}&appid=${key}`;
+			const url = `${protocol}//api.openweathermap.org/data/2.5/weather?q=${loc}&appid=${key}`;
 			displayWeather(url);
 		}
 	});
@@ -46,7 +46,7 @@ $(() => {
 		if ($('input[type="text"]').is(":focus") && (e.keyCode == 13)) {
 			const loc = $('input[type="text"]').val();
 			if(loc !== '') {
-				const url = `http://api.openweathermap.org/data/2.5/weather?q=${loc}&appid=${key}`;
+				const url = `${protocol}//api.openweathermap.org/data/2.5/weather?q=${loc}&appid=${key}`;
 				displayWeather(url);
 			}
 		}
