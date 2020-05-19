@@ -14,7 +14,7 @@ body {
 }
 #stand {
 	position: absolute;
-	bottom: 50px;
+	bottom: 0px;
 	text-align: center;
 	width: 100%;
 }
