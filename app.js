@@ -33,7 +33,7 @@ $(() => {
 		})
 		.done(data => {
 			let forecast5 = data.list;
-			for(let i = 0; i < 5; i++) {
+			for(let i = 0; i < 5; i+=8) {
 				forecast.push(forecast5[i]);
 			}
 			let swayAmount = Math.ceil(forecast[0].wind.speed / 5) * 5
