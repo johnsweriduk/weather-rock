@@ -211,4 +211,7 @@ div#title {
 		transform: scale(2) translate(-25%,64%);
 		left: 50%;
 	}
+	#stand {
+		width: 100%;
+	}
 }
