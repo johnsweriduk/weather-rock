@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Rock</title>
 	<link rel="stylesheet" href="assets/css/rain.css">
   <link rel="stylesheet" href="style.css" type="text/css">
@@ -14,14 +15,16 @@
   </head>
   <body>
 	<nav>
-		<a href="#">Home</a>
-		<a href="#">3-Day Forecast</a>
-		<a href="#">5-Day Forecast</a>
+		<a href="/">Home</a>
+		<a href="/forecast">5-Day Forecast</a>
 		<input type="text" placeholder="Enter Location">
 		<input type="submit" value="Search">
 	</nav>
 	<main>
-		<div id="weather-rock">
+		<div class="title">
+			<h1>Current Conditions</h1>
+		</div>
+		<div id="weather-rock" class="weather-rock">
 			<div id="rain" class="back-row-toggle splat-toggle">
 				<div class="rain front-row"></div>
 				<div class="rain back-row"></div>
@@ -31,6 +34,87 @@
 				<div class="stick right"></div>
 				<div id="rock">
 					<img src="assets/svg/rock.svg">
+				</div>
+			</div>
+			<div id="legend">
+				<div class="title">
+					<h1>John's Weather Forecasting Stone</h1>
+				</div>
+				<div class="condition">
+					<p class="title">Condition</p>
+					<p>Stone is wet</p>
+					<p>Stone is dry</p>
+					<p>Shadow on ground</p>
+					<p>White on top</p>
+					<p>Can't see stone</p>
+					<p>Swinging stone</p>
+					<p>Stone jumping up & down</p>
+					<p>Stone gone</p>
+				</div>
+				<div class="forecast">
+					<p class="title">Forecast</p>
+					<p>Raining</p>
+					<p>Not raining</p>
+					<p>Sunny</p>
+					<p>Snowing</p>
+					<p>Foggy</p>
+					<p>Windy</p>
+					<p>Earthquake</p>
+					<p>Tornado</p>
+				</div>
+			</div>
+		</div>
+		<div class="title" id="forecast">
+			<h1>5 Day Forecast</h1>
+		</div>
+		<div id="weather-rock-forecast" class="weather-rock">
+			<div id="title">
+				<p>Day 1 Forecast</p>
+				<p>Day 2 Forecast</p>
+				<p>Day 3 Forecast</p>
+				<p>Day 4 Forecast</p>
+				<p>Day 5 Forecast</p>
+			</div>
+			<div id="controls">
+				<div class="left-arrow"><</div>
+				<div class="right-arrow">></div>
+			</div>
+			<div id="rain" class="back-row-toggle splat-toggle">
+				<div class="rain front-row"></div>
+				<div class="rain back-row"></div>
+			</div>
+			<div id="stand">
+				<div class="stick left"></div>
+				<div class="stick right"></div>
+				<div id="rock">
+					<img src="assets/svg/rock.svg">
+				</div>
+			</div>
+			<div id="legend">
+				<div class="title">
+					<h1>John's Weather Forecasting Stone</h1>
+				</div>
+				<div class="condition">
+					<p class="title">Condition</p>
+					<p>Stone is wet</p>
+					<p>Stone is dry</p>
+					<p>Shadow on ground</p>
+					<p>White on top</p>
+					<p>Can't see stone</p>
+					<p>Swinging stone</p>
+					<p>Stone jumping up & down</p>
+					<p>Stone gone</p>
+				</div>
+				<div class="forecast">
+					<p class="title">Forecast</p>
+					<p>Raining</p>
+					<p>Not raining</p>
+					<p>Sunny</p>
+					<p>Snowing</p>
+					<p>Foggy</p>
+					<p>Windy</p>
+					<p>Earthquake</p>
+					<p>Tornado</p>
 				</div>
 			</div>
 		</div>

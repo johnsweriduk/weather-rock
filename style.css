@@ -1,8 +1,23 @@
 body {
 	margin: 0;
 	box-sizing: border-box;
+	font-family: sans-serif;
 }
-#weather-rock {
+nav {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+nav > * {
+	margin-left: 15px;
+	margin-right: 15px;
+}
+nav a {
+	color: inherit;
+	outline: none;
+	text-decoration: none;
+}
+.weather-rock {
 	width: 1200px;
 	margin: 0 auto;
 	min-height: 700px;
@@ -16,7 +31,7 @@ body {
 	position: absolute;
 	bottom: 0px;
 	text-align: center;
-	width: 100%;
+	width: 50%;
 }
 .stick {
 	height: 500px;
@@ -56,6 +71,61 @@ body {
 	transform: translate(-2px, -100%);
 	position: absolute;
 	z-index: -1;
+}
+div#legend {
+    width: 500px;
+    position: absolute;
+    background: #fff;
+    right: 100px;
+	top: 50%;
+	transform: translateY(-50%);
+	padding: 25px;
+}
+#legend h1 {
+	font-size: 20px;
+}
+#legend .condition,
+#legend .forecast {
+	width: 50%;
+	text-align: center;
+	float: left;
+}
+.title {
+	text-align: center;
+}
+div#controls {
+    position: Absolute;
+    z-index: 20;
+    width: 200px;
+    padding: 25px;
+}
+#controls > div {
+    width: 75px;
+    float: left;
+    text-align: center;
+    background: #fff;
+    font-size: 30px;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+}
+#controls > div:hover {
+	background-color: #f7f7f7;
+}
+div#title {
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    text-align: Center;
+}
+#title p {
+	display: none;
+	position: absolute;
+	width: 100%;
+	font-size: 25px;
+	font-weight: bold;
+}
+#title p:first-child {
+	display: block;
 }
 @keyframes sway5 {
 	0% {transform: rotate(-5deg)}
@@ -101,4 +171,44 @@ body {
 	0% {transform: rotate(-45deg)}
 	50% {transform: rotate(45deg)}
 	100% {transform: rotate(-45deg)}
+}
+@media (max-width: 1200px) {
+	.weather-rock {
+		width: 90%;
+	}
+	div#legend {
+		width: 400px;
+		right: 50px;
+	}
+}
+@media (max-width: 768px) {
+	.weather-rock {
+		width: 200vw;
+		left: 50%;
+		transform: translateX(-50%) scale(0.5);
+		margin-top: -100px;
+		margin-bottom: 400px;
+	}
+	main {
+		padding: 15px;
+	}
+	body {
+		max-width: 100vw;
+		overflow-x: hidden;
+	}
+	nav {
+		max-width: 100vw;
+	}
+	nav > * {
+		margin: 15px;
+	}
+	div#legend {
+		bottom: 0;
+		transform: translateY(80%);
+		height: 400px;
+		width: calc(100vw - 80px);
+		right: auto;
+		transform: scale(2) translate(-25%,64%);
+		left: 50%;
+	}
 }
