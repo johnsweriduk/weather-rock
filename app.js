@@ -24,6 +24,9 @@ $(() => {
 					$('.rain.back-row').css('display','block');
 				}
 			}
+			console.log(data.name);
+			$('main > .title').find('p').remove();
+			$('main > .title').append('<p>' + data.name + '</p>');
 		});
 	}
 	const displayForecast = (url) => {
